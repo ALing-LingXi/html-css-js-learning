@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动画animation-仿360官网动画效果</title>
+  <style>
+    body,html{
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      background: url("../img/bg.jpg")  no-repeat center/cover;
+      overflow: hidden;
+    }
+
+    .ball1 {
+      position: absolute;
+      left: 20%;
+      top: 22%;
+      width: 13%;
+      animation: move 5s alternate  infinite linear;
+    }
+
+    .ball2 {
+      position: absolute;
+      left: 65%;
+      top: 50%;
+      width: 22%;
+      animation: move 5s alternate  infinite linear;
+    }
+
+    .wx {
+      position: absolute;
+      width: 8%;
+      left: 64%;
+      top: 40%;
+      animation: rotate 6s infinite linear alternate;
+    }
+    @keyframes move {
+      100%{
+        transform: translateY(45px);
+      }
+    }
+    @keyframes rotate {
+      100%{
+        transform: rotate(45deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <img src="../img/ball1.png" alt="" class="ball1">
+  <img src="../img/ball2.png" alt="" class="ball2">
+  <img src="../img/wx.png" alt="" class="wx">
+</body>
+
+</html>

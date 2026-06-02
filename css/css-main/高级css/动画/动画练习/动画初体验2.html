@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bs{
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      margin: 0 auto;
+      animation: change 1s 3;
+      animation: change 1s 2s;
+      animation: change 1s infinite;
+      animation: change 1s infinite alternate;
+      animation: change 1s infinite alternate steps(60) ;
+      animation: change 1s forwards steps(60) ;
+    }
+    @keyframes change {
+      from{
+        width: 200px;
+      }
+      to{
+        width: 800px;
+      }
+    }
+    .bs:hover{
+      animation-play-state:paused ;
+    }
+  </style>
+</head>
+<body>
+  <div class="bs">
+
+  </div>
+</body>
+</html>

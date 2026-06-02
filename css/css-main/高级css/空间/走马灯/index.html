@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .bs {
+      margin: 100px auto;
+      border: 5px solid black;
+      width: 1440px;
+      height: 270px;
+      overflow: hidden;
+    }
+
+    ul {      
+      list-style-type: none;
+      display: flex;
+      animation: move 4s infinite linear;
+    }
+
+    ul:hover{
+      animation-play-state: paused;
+    }
+    img {
+      display: block;
+    }
+
+    @keyframes move {
+      0% {
+        transform: translate(0);
+      }
+
+      100% {
+        transform: translate(-3360px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bs">
+    <ul>
+      <li><img src="./images/1.jpg" alt=""></li>
+      <li><img src="./images/2.jpg" alt=""></li>
+      <li><img src="./images/3.jpg" alt=""></li>
+      <li><img src="./images/4.jpg" alt=""></li>
+      <li><img src="./images/5.jpg" alt=""></li>
+      <li><img src="./images/6.jpg" alt=""></li>
+      <li><img src="./images/7.jpg" alt=""></li>
+      <li><img src="./images/1.jpg" alt=""></li>
+      <li><img src="./images/2.jpg" alt=""></li>
+      <li><img src="./images/3.jpg" alt=""></li>
+    </ul>
+  </div>
+</body>
+
+</html>

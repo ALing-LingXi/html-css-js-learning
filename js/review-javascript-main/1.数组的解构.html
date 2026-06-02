@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //解构，多的则舍去少的则undefined
+    const num1 = [1,2,3,4,5,6]
+    //同时声明和解构
+    let [a,b,c,d] = num1
+    console.log(a,b,c,d);
+    let f,g,h
+    const name = ['xixi','linxi','haha']
+    ;[f,g,h,k] = name
+    console.log(f,g,h,k);
+    //解构赋值还可以往变量设置默认值
+    ;[f,g,h,k=f] = name
+    console.log(f,g,h,k);
+    console.log('--------------');
+    
+    //通过解构快速交换两个值
+    //解构前面加;
+    let x,y
+    x = 10 , y = 20
+    ;[x,y] = [y,x]
+    console.log(x,y);
+    console.log("-------");
+    let age1,name1,obj
+    //解构二维数组
+    const arr = [['linxixi',18],['xixi',18]]
+   ;[[name1,age1],obj] = arr
+   console.log(name1,age1,obj);
+   
+   for(value1 of arr){
+    for(value2 of value1)
+    console.log(value2);
+   }
+
+   let z,l
+   z=3,l=6
+   ;[z,l]=[l,z]
+  </script>
+</body>
+</html>

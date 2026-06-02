@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+    数组（Array）笔记优化版
+
+    1. 基本概念
+      - 数组是一种复合数据类型，可以存储多个不同类型的数据。
+      - 数组中的数据是有序的，每个元素都有唯一的索引（下标），从 0 开始。
+      - 元素：数组中存储的每一项数据。
+      - 索引（index）：用于访问数组元素的编号，必须是大于等于 0 的整数。
+
+    2. 创建数组的方法
+      - 使用字面量：let arr = [1, 'a', true];
+      - 使用构造函数：let arr = new Array(1, 'a', true);
+
+    3. 操作数组元素
+      - 添加元素：arr[索引] = 元素;
+      - 读取元素：arr[索引];
+      - 如果读取不存在的索引，返回 undefined，不会报错。
+
+    4. 数组长度（length）
+      - 获取长度：arr.length
+      - 实际含义：数组最大索引 + 1
+      - 向末尾添加元素：arr[arr.length] = 元素;
+      - length 属性可以被手动修改，可能导致数组截断或扩展。
+
+    5. 示例代码
+      let arr = [10, 20, 30];
+      arr[3] = 40;           // 添加新元素
+      console.log(arr[1]);   // 读取元素，输出 20
+      console.log(arr[10]);  // 读取不存在的元素，输出 undefined
+      console.log(arr.length); // 输出 4
+      arr.length = 2;        // 截断数组，只剩前两个元素
+      console.log(arr);      // 输出 [10, 20]
+    */
+  </script>
+</body>
+</html>

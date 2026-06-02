@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+
+    ul {
+      list-style: none;
+      margin: 100px auto;
+      max-width: 900px;
+      height: 570px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 10px;
+      transition: all 0.5s;
+      overflow: hidden;
+    }
+    ul li{
+      position: relative;
+    }
+    ul p{
+      color: white;
+      position: absolute;
+      left: 0px;
+      bottom: -100px;
+      margin-left: 10px;
+      transition: all 0.5s;
+    }
+    ul li:hover p{
+      bottom: 0px;
+    }
+    ul>li:nth-child(1) {
+      background: url(./img/pic1.jpg) center/cover no-repeat;
+    }
+
+    ul>li:nth-child(2) {
+      background: url(./img/pic2.jpg) center/cover no-repeat;
+    }
+
+    ul>li:nth-child(3) {
+      background: url(./img/pic3.jpg) center/cover no-repeat;
+    }
+
+    ul>li:nth-child(4) {
+      background: url(./img/pic4.jpg) center/cover no-repeat;
+    }
+
+    ul:has(li:nth-child(1):hover) {
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    }
+
+    ul:has(li:nth-child(2):hover) {
+      grid-template-columns: 1fr 2fr 1fr 1fr;
+    }
+
+    ul:has(li:nth-child(3):hover) {
+      grid-template-columns: 1fr 1fr 3fr 1fr;
+    }
+
+    ul:has(li:nth-child(4):hover) {
+      grid-template-columns: 1fr 1fr 1fr 2fr;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bs">
+    <ul>
+      <li>
+        <p>新品出门</p>
+      </li>
+      <li>
+        <p>新品出门</p>
+      </li>
+      <li>
+        <p>新品出门</p>
+      </li>
+      <li>
+        <p>新品出门</p>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

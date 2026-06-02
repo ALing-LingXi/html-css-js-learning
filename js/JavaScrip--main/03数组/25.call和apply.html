@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     根据函数调用的方式不同，this的值也不同，
+    1. 以函数形式调用，this是window
+    2. 以方法形式调用，this是调用方法的对象
+    2. 构造函数中，this是新建的对象
+    4. 箭头函数没有自己的this，由外层决定
+    5. 通过call和apply调用的函数，它们第一个参数就是函数的this */
+
+/*     调用函数除了函数()这种形式外，还可以通过其他的方式来调用函数
+      比如，我们可以通过调用函数的call()和apply()方法来调用函数
+      函数.call()
+      函数.apply()
+      -call 和apply的第一个参数会成为函数的指针
+      -通过call方法调用函数，函数的实参直接在第一个参数后一个个列出来
+      apply方法调用函数，函数的实参需要一个数组传递 */
+      function fn(){
+        console.log("这是this->",this);
+      }
+      function fn1(a,b){
+        console.log(a,b,this);
+        return a+b
+      }
+      obj = {name:'悟空',fn}
+      fn.call()
+      fn.apply()
+      fn1.call(obj,2,3)
+      fn1.apply(obj,[4,6])
+  </script>
+</body>
+</html>

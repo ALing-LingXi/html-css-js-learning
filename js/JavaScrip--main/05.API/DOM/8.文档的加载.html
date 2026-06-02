@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  <script>
+/*     网页加载与JavaScript执行时机问题
+问题描述：
+网页是自上向下加载的，如果将js代码编写到网页的上边
+js代码在执行时，网页还没有加载完毕，这时会出现无法获取到DOM对象的情况
+
+相关事件：
+window.onload 事件会在窗口中的内容加载完毕之后才触发
+document 的 DOMContentLoaded 事件会在当前文档加载完毕之后触发
+
+解决方案：
+1.将script标签编写到body的最后(最快)
+2.将代码编写到window.onload的回调函数中(最慢)
+3.将代码编写到document对象的DOMContentLoaded的回调函数中(第三快)
+4.将代码编写到外部的js文件中，然后以defer的形式进行引入（第二快，执行时机更早，早于DOMContentLoaded） */
+/*     const button =document.getElementById('eng')
+    console.log(button); */
+ /*    window.onload =function(){
+    const button =document.getElementById('eng')
+    alert(button);
+    } */
+ /*    window.addEventListener('load',function(){ const button =document.getElementById('eng')
+    alert(button);}) */
+    document.addEventListener('DOMContentLoaded',function(){ const button =document.getElementById('eng')
+    alert(button);})
+  </script>
+<body>
+  <button id="eng">点击我</button>
+  <iframe src="https://www.lilichao.com" frameborder="0"></iframe>
+</body>
+</html>

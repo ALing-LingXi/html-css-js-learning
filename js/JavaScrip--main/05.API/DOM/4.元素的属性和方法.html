@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+    <div id="box1">
+    <span class="s1">儿子1111</span>
+    <span class="s1">儿子2222</span>
+  </div>
+  <span class="s1">兄弟</span>
+  
+  <script>
+/*     div元素的原型链
+    HTMLDivElement -> HTMLElement -> Element -> Node -> ...
+    通过元素节点对象获取其他节点的方法
+    element.childNodes 获取当前元素的子节点（会包含空白的子节点）
+    element.children 获取当前元素的子元素
+    element.firstElementChild 获取当前元素的第一个子元素
+    element.lastElementChild 获取当前元素的最后一个子元素
+    element.nextElementSibling 获取当前元素的下一个兄弟元素
+    element.previousElementsibling 获取当前元素的前一个兄弟元素
+    element.parentNode 获取当前元素的父节点
+    element.tagName 获取当前元素的标签名   */
+
+    const div1 = document.getElementById('box1')
+    console.log(div1); // 输出整个div元素
+    
+    const spans = div1.getElementsByTagName('span')
+    console.log(spans); // 输出span元素的集合
+    
+    const div2 = box1.getElementsByClassName('s1')
+    console.log(div2);
+    
+    let display = box1.children
+    console.log(display);
+    display = box1.firstElementChild
+    console.log(display);
+    display = box1.nextElementSibling
+    console.log(display);
+    console.log(display.tagName);
+    
+  </script>
+</body>
+
+</html>

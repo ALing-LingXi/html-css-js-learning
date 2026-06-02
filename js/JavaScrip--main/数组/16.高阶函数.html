@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     高阶函数
+      -如果一个函数的参数或返回值是函数，则这个函数就称为高阶函数
+      -将函数作为参数，意味着可以对另一个函数动态的传递代码
+       */
+         function fn(arr,cb){
+      const arr1 = []
+      for(let i of arr){
+        if (cb(i)){
+          arr1.push(i)
+        }
+      }
+      return arr1
+    }
+    const arr2 = [{name:'linxi',age:18},{name:'xixi',age:15},{name:'Aling',age:12}]
+    const arr3 = fn(arr2,(i)=>{return i.age<18})
+    console.log(arr3);
+    const arr4 = fn(arr2,(i)=>{return i.name==='linxi'})
+    console.log(arr4);
+    
+    
+  </script>
+</body>
+</html>

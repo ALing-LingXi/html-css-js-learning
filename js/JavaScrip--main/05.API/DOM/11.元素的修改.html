@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="button1">增加按钮</button>
+  <button id="button2">替换按钮</button>
+  <ul id="list">
+    <li id="sunwukong">孙悟空</li>
+    <li id="zhubajkie">猪八戒</li>
+    <li id="shaheshang">沙和尚</li>
+  </ul>
+  <script>
+    const button1 = document.getElementById('button1')
+    const button2 = document.getElementById('button2')
+    const list = document.getElementById('list')
+    button1.onclick = function () {
+      const createli = document.createElement('li')
+      createli.innerText = '白骨精'
+      createli.id = 'baigujing'
+      // list.appendChild(createli)
+      //appendChild()用于给一个节点添加子节点
+      // insertAdjacentElement()可以向元素的任意位置添加元素
+      //两个参数:1.要添加的位置2.要添加的元素 
+      //beforeend 标签的最后，afterbegin 标签的开头
+      //beforebegin 在元素的前边插入元素(兄弟元素) afterend(在元素后边插入元素)(兄弟元素)
+      // list.insertAdjacentElement("afterend",createli)
+      list.insertAdjacentHTML("beforeend", "<li id='bgj'>白骨精</li>")
+    }
+    button2.onclick = function () {
+      const li = document.createElement('li')
+      li.innerText ='蜘蛛精'
+      li.id = 'zhizhujing'
+      const swk = document.querySelector('#sunwukong')
+      // swk.remove()  remove()方法用来删除当前元素
+      swk.replaceWith(li)
+      //使用一个元素替换当前元素
+    }
+  </script>
+</body>
+
+</html>

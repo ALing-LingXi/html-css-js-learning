@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const str = "爱自己最重要,爱爱着自己的人"
+    document.body.innerHTML = str.split(",").map(ele => `铭记: <span>${ele}</span><br/>`).join("")
+  </script>
+</body>
+
+</html>

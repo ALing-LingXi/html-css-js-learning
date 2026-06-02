@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //1.函数声明：function 函数名(){}
+    function fn() {
+      //语句
+    }
+    //2.匿名函数的创建 const fn = function(){}
+    const fn = function(){}
+    //3. 箭头函数
+    const fn = ()=>{语句}
+    const fn = ()=>console.log('一条语句可以不写大括号');
+
+/*     4.立即执行函数
+    编写程序的时候要尽量减少全局变量的产生，避免和别人定义的变量冲突
+    使用立即执行函数一定要在最后面加;避免这种()()函数调用一样的形式而造成报错 */
+    (function(){var a = 3}());
+    console.log(写在两个立即执行函数中间也要加分号);
+    (function () { var b = 3 }());
+    
+  </script>
+</body>
+
+</html>

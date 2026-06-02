@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*         浅拷贝；通过 数组.splice()来进行浅复制，数组存储简单的对象复制之后改变其中的数据
+        对另一个对象不影响，但是存储复杂的对象，改变一个对象会影响另一个数组。
+        所以我们需要深拷贝 structuredClone()
+        但是我们通常不会深拷贝，因为深拷贝会占用更多的内存空间，影响性能。
+        我们
+         */
+        const arr = [{name:'孙悟空'},{name :'猪八戒'},{name:'沙僧'},{name:'唐僧'}]
+        const arr1 = structuredClone(arr)
+        console.log(arr);
+        console.log(arr1);
+        console.log(arr[0]===arr1[0]);
+        arr[0] = '孙大圣'
+        console.log(arr);
+        console.log(arr1);
+        console.log('-----------------------------------------');
+        console.log('浅拷贝');
+        const arr2 = arr.slice()
+        console.log(arr);
+        console.log(arr2);
+        console.log(arr[0]===arr2[0]);
+        arr[0] = {name:'行者孙'}
+        console.log(arr);
+        console.log(arr2);
+    </script>
+</body>
+</html>

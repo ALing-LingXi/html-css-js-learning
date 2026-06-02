@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box1 {
+      width: 300px;
+      height: 300px;
+      background-color: greenyellow;
+      margin: 50PX;
+      padding: 50px;
+      border: solid 10px red;
+      overflow: auto;
+    }
+
+    #box2 {
+      width: 200px;
+      height: 600px;
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="btn">点我检查</button>
+  <div id="box" >
+    <div id="box1"style="position: relative;">
+      <div id="box2">
+      </div>
+    </div>
+  </div>
+  <script>
+    /*  元素尺寸属性
+     clientHeight / clientWidth
+     获取元素内部的宽度和高度
+     包括：内容区 + 内边距(padding)
+     不包括：边框(border)、外边距(margin)、滚动条
+ 
+     offsetHeight / offsetWidth
+     获取元素的可见框大小
+     包括：内容区 + 内边距(padding) + 边框(border)
+     不包括：外边距(margin)
+ 
+     scrollHeight / scrollWidth
+     获取元素滚动区域的大小包括由于溢出而不可见的内容元素位置属性数值固定
+ 
+     offsetParent
+     获取元素的定位父元素
+     定位父元素定义：离当前元素最近的开启了定位(position不是static)的祖先元素
+     如果所有祖先元素都没有开启定位，则返回body body自带8px
+ 
+     offsetTop / offsetLeft
+     获取元素相对于其定位父元素(offsetParent)的偏移量
+     返回相对于定位父元素上边界 / 左边界的距离 */
+
+/*   scrollTop
+     scrollLeft
+     获取设置元素的滚动偏移量 */
+
+    const box1 = document.querySelector('#box1')
+    const box2 = document.querySelector('#box2')
+
+    console.log(box1.clientWidth);
+    console.log(box1.clientHeight);
+    console.log(box1.offsetHeight);
+    console.log(box1.offsetWidth);
+    console.log(box1.scrollWidth)
+    console.log(box1.scrollHeight)
+    console.log(box1.offsetParent);
+    console.log(box2.offsetTop);
+    console.log(box2.offsetLeft);
+    console.log(box1.offsetTop);
+    console.log(box1.offsetLeft);
+    console.log('----------------------');
+    const button = document.querySelector('#btn')
+    button.onclick = function () {
+    console.log(box1.scrollTop);
+    console.log(box1.scrollLeft);
+    }
+  </script>
+</body>
+
+</html>

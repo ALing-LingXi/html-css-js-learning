@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    .demo-block {border:1px solid #ccc; border-radius:8px; margin:18px 0; padding:16px; background:#fafbfc;}
+    .demo-title {font-weight:bold; color:#2d8cf0; font-size:1.1em; margin-bottom:8px;}
+    .demo-label {color:#555; font-weight:bold;}
+    .demo-array {color:#27ae60; font-family:monospace;}
+    .demo-value {color:#e67e22; font-family:monospace;}
+    .demo-sep {margin:10px 0; border-bottom:1px dashed #ddd;}
+  </style>
+  <script>
+    function writeBlock(title, rows) {
+      document.write('<div class="demo-block">');
+      document.write('<div class="demo-title">'+title+'</div>');
+      rows.forEach(function(row) {
+        document.write('<div>'+row+'</div>');
+      });
+      document.write('</div>');
+    }
+
+    // push()
+    let fruits = ['apple', 'banana'];
+    let rows = [];
+    rows.push('<span class="demo-label">原数组:</span> <span class="demo-array">['+fruits.join(', ')+']</span>');
+    let newLength = fruits.push('orange', 'grape');
+    rows.push('<span class="demo-label">添加后:</span> <span class="demo-array">['+fruits.join(', ')+']</span>');
+    rows.push('<span class="demo-label">新长度:</span> <span class="demo-value">'+newLength+'</span>');
+    writeBlock('push() 示例', rows);
+
+    // pop()
+    fruits = ['apple', 'banana', 'orange'];
+    rows = [];
+    rows.push('<span class="demo-label">原数组:</span> <span class="demo-array">['+fruits.join(', ')+']</span>');
+    let lastFruit = fruits.pop();
+    rows.push('<span class="demo-label">删除后:</span> <span class="demo-array">['+fruits.join(', ')+']</span>');
+    rows.push('<span class="demo-label">被删除的元素:</span> <span class="demo-value">'+lastFruit+'</span>');
+    writeBlock('pop() 示例', rows);
+
+    // unshift()
+    fruits = ['banana', 'orange'];
+    rows = [];
+    rows.push('<span class="demo-label">原数组:</span> <span class="demo-array">['+fruits.join(', ')+']</span>');
+    newLength = fruits.unshift('apple');
+    rows.push('<span class="demo-label">添加后:</span> <span class="demo-array">['+fruits.join(', ')+']</span>');
+    rows.push('<span class="demo-label">新长度:</span> <span class="demo-value">'+newLength+'</span>');
+    writeBlock('unshift() 示例', rows);
+
+    // shift()
+    fruits = ['apple', 'banana', 'orange'];
+    rows = [];
+    rows.push('<span class="demo-label">原数组:</span> <span class="demo-array">['+fruits.join(', ')+']</span>');
+    let firstFruit = fruits.shift();
+    rows.push('<span class="demo-label">删除后:</span> <span class="demo-array">['+fruits.join(', ')+']</span>');
+    rows.push('<span class="demo-label">被删除的元素:</span> <span class="demo-value">'+firstFruit+'</span>');
+    writeBlock('shift() 示例', rows);
+
+    // splice() 删除
+    fruits = ['apple', 'banana', 'orange', 'grape'];
+    rows = [];
+    rows.push('<span class="demo-label">原数组:</span> <span class="demo-array">['+fruits.join(', ')+']</span>');
+    let removed = fruits.splice(1, 2); // 从索引1开始删除2个元素
+    rows.push('<span class="demo-label">删除后:</span> <span class="demo-array">['+fruits.join(', ')+']</span>');
+    rows.push('<span class="demo-label">被删除的元素:</span> <span class="demo-value">['+removed.join(', ')+']</span>');
+    writeBlock('splice() 删除示例', rows);
+
+    // splice() 插入
+    fruits = ['apple', 'grape'];
+    rows = [];
+    rows.push('<span class="demo-label">原数组:</span> <span class="demo-array">['+fruits.join(', ')+']</span>');
+    fruits.splice(1, 0, 'banana', 'orange'); // 从索引1开始，删除0个，插入2个元素
+    rows.push('<span class="demo-label">插入后:</span> <span class="demo-array">['+fruits.join(', ')+']</span>');
+    writeBlock('splice() 插入示例', rows);
+
+    // splice() 替换
+    fruits = ['apple', 'banana', 'cherry'];
+    rows = [];
+    rows.push('<span class="demo-label">原数组:</span> <span class="demo-array">['+fruits.join(', ')+']</span>');
+    removed = fruits.splice(1, 1, 'orange'); // 从索引1开始，删除1个，插入1个元素
+    rows.push('<span class="demo-label">替换后:</span> <span class="demo-array">['+fruits.join(', ')+']</span>');
+    rows.push('<span class="demo-label">被替换的元素:</span> <span class="demo-value">['+removed.join(', ')+']</span>');
+    writeBlock('splice() 替换示例', rows);
+
+    // reverse()
+    fruits = ['apple', 'banana', 'orange'];
+    rows = [];
+    rows.push('<span class="demo-label">原数组:</span> <span class="demo-array">['+fruits.join(', ')+']</span>');
+    fruits.reverse();
+    rows.push('<span class="demo-label">反转后:</span> <span class="demo-array">['+fruits.join(', ')+']</span>');
+    writeBlock('reverse() 示例', rows);
+  </script>
+</body>
+</html>

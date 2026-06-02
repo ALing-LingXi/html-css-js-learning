@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn">
+    添加元素
+  </button>
+  <ul id="list">
+    <li><a href="">内容1</a></li>
+    <li><a href="">内容2</a></li>
+    <li><a href="">内容3</a></li>
+    <li><a href="">内容4</a></li>
+  </ul>
+
+  <script>
+    //点击能获取链接里面的内容,添加的元素也要有这个功能
+    //绑定到document我们就可以省事很多
+    const links = document.getElementsByTagName('a')
+    document.addEventListener('click',event=>{
+      event.preventDefault()//取消默认行为
+      if([...links].includes(event.target))
+     alert(event.target.innerText);
+    })
+    const button =document.querySelector('#btn')
+    const list = document.querySelector('#list')
+    button.addEventListener('click',event=>{
+      list.insertAdjacentHTML('beforeend',` <li><a href="">新内容</a></li>`)
+    })
+    
+  </script>
+</body>
+</html>

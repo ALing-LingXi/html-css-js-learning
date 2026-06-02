@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+/*     字符串正则表达式方法总结
+      split()
+          可以根据正则表达式来对一个字符串进行拆分
+      search()
+          可以去搜索符合正则表达式的内容第一次在字符串中出现的位置
+      replace()
+          根据正则表达式替换字符串中的指定内容
+      match()
+          根据正则表达式去匹配字符串中符合要求的内容
+      matchAll()
+          根据正则表达式去匹配字符串中符合要求的内容（必须设置g全局匹配）
+          它返回的是一个迭代器
+ */
+    let str = 'abc138799022abd197070809'
+    let reg = str.split(/ab[a-z]/)
+    let result = reg
+    console.log(result);
+    console.log(str.search(/\d{9}/));
+    console.log(str.replace(/1[3-9]\d{7}/g, '电话号码已经更替'));//写g就是满足要求全部替换
+    console.log(str.match(/\d{9}/g));
+    console.log(str.matchAll(/\d{9}/g));//调用这个一定要全局匹配
+    for(value of str.matchAll(/(1[3-9])\d{7}/g)){
+      console.log(value);
+      
+    }
+
+  </script>
+</body>
+
+</html>

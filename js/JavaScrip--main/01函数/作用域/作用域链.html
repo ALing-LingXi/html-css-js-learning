@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     当我们使用一个变量的时候js优先在当前作用域寻找变量
+    如果没找到，那么会往上层继续寻找
+    如果还是没找到，那么继续往上层找，以此类推
+    如果在全局还没找到，则报错，xxx is not defined */
+    a = 30
+    function fn(){
+      let a = 20
+      function fn(){
+        let a = 10
+        console.log(a);
+        console.log(c);
+      }
+      fn()
+    }
+    fn()
+  </script>
+</body>
+</html>

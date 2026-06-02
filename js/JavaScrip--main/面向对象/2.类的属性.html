@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //类的代码块默认就是严格模式
+    //类的代码块是用来添加类的属性的，不是什么代码都能写进去的
+    class person{
+      name = 'xixibuxixi'//实例属性，通过实例对象访问
+      age = '19'
+      static reaName='linxi'//静态属性,类属性
+                                //只能通过类去访问
+    }
+    const d1 = new person()
+    console.log(d1.name);
+    console.log(d1.age);
+    console.log(d1.reaName);//无法访问
+    console.log(person.reaName);
+    
+    
+    
+  </script>
+</body>
+</html>

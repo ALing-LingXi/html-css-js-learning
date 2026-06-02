@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     ...(展开运算符)
+      -可以将一个数组中的元素展开到另一个数组中或者作为函数的参数传递
+      -通过它可以对数组进行浅复制 */
+      const arr1 =['linxi','xixi','kuxixi']
+      // const arr3 = [arr1[0],arr[2],arr[3]]  这样做太麻烦了
+      const arr3 = [...arr1]
+      console.log(arr3);
+      function sum(a,b,c){
+        return a+b+c
+      }
+      const add = sum(...arr1)
+      console.log(add);
+
+/*       对象的复制
+          -Object.assign(目标对象，被复制对象)
+          -将被复制对象中的属性复制到目标对象并且返回目标对象 */
+          //如果已经有的属性，会被重名的属性覆盖，后面的覆盖前面的。
+          obj ={name:'linxi',age:'18',gender:'woman'}
+          const obj1 = Object.assign({},obj)
+          console.log(obj1);
+          const obj2 = Object.assign({name:'xixi'},obj)
+          const obj3 = Object.assign({},obj,{name:'xixi'})
+          console.log(obj2);
+          console.log(obj3);
+          const obj4 = {adress:"花果山",...obj,name:'yueye'}
+          console.log(obj4);
+  </script>
+</body>
+</html>

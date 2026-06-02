@@ -1,0 +1,152 @@
+.warpper {
+  width: 1200px;
+  margin: 0px auto;
+}
+
+.head {
+  background-color: #2b303b;
+  height: 35px;
+}
+
+.head .warpper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.head h1 a {
+  display: block;
+  width: 80px;
+  height: 35px;
+  background: url("../images/logo.png") left center no-repeat;
+  font-size: 0px;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav li {}
+
+.nav a {
+  display: block;
+  margin-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: white;
+  font-size: 12px;
+}
+
+.nav li a {
+  border-right: 1px solid #fff;
+}
+
+.nav .end {
+  border-right: 0px;
+}
+
+.banner {
+  height: 350px;
+  background-color: #181c28;
+}
+
+.banner .ban {
+  background: url("../images/banner.png");
+}
+
+.banner .left {
+  width: 191px;
+  height: 350px;
+  background-color: #1b2a3f;
+  padding: 13px 20px;
+}
+
+.left a {
+  /* margin: 13px 20px; */
+  display: block;
+  color: white;
+  margin-bottom: 13px;
+  background: url("../uploads/right.png") no-repeat right center;
+}
+
+.text {
+  text-align: center;
+}
+
+.text h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.text h5 {
+  margin-bottom: 30px;
+}
+
+.content {
+  display: flex;
+  height: 560px;
+  padding: 40px;
+}
+
+.content .left {
+  margin-right: 75px;
+  flex: 1px;
+}
+
+.content .right {
+  flex: 1px;
+}
+
+.content .left h3 {
+  display: block;
+  margin-bottom: 24px;
+  font-size: 35px;
+  font-weight: normal;
+}
+
+.content .left span {
+  line-height: 30px;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.content button {
+  width: 160px;
+  height: 50px;
+  padding: 10px 50px;
+  line-height: 32px;
+  margin-left: 5px;
+  border: 1px solid #ffa500;
+  background-color: #fff;
+}
+.content .right img{
+  width: 580px;
+  height: 380px;
+}
+.bottom{
+  height: 400px;
+  background-color: #2e3033;
+}
+.bottom .btm{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.btm li{
+  margin-bottom: 10px;
+  color: #ccc;
+}
+.btm li.first {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #fff;
+}
+.btm button{
+  background-color: #00a4ff;
+  color: white;
+  height: 35px;
+  width: 195px;
+  margin-top: 10px;
+}

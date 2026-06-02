@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*     递归的核心思想就是将一个大问题拆分成一个个小问题，小的问题解决了，大的问题也解决了
+        编写递归函数，一定要包含两个条件
+        1.基线条件---递归的终止条件
+        2.递归条件---如果对问题进行拆分
+        递归和循环是一致的，不同点在于，递归的思路比较清晰简洁，循环的执行性能比较好，
+        只在一些使用循环比较麻烦的场景下，才使用递归 */
+
+    // 求阶乘
+    let result = 1
+    function fn(num) {
+      for (let i = 1; i <= num; i++) {
+        result*=i
+      }
+      return result
+    }
+    const num = fn(4)
+    console.log(num);
+    
+    function fn2(num){
+      if(num === 1){
+        return 1
+      }
+      return fn2(num-1)*num
+    }
+    const num1 = fn2(5)
+    console.log(num1);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     希望someFn()函数执行的时候可以记录一条日志
+    在不修改原函数的基础上，为其增加记录日志的功能
+    可以通过高阶函数，来动态的生成一个新函数 */
+    function someFn(){
+      console.log('ahah');
+      return 'text'
+    }
+    // someFn()
+    // let result = someFn()
+    // console.log(result);
+    
+    function Outer(cb){
+      return ()=>{
+         let result = cb()
+        console.log('打印日志');
+        return cb()
+      }
+    }
+    let newResult = Outer(someFn)//立即执行函数返回代码块
+    console.log(newResult());
+    
+  </script>
+</body>
+</html>

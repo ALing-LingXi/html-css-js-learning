@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let reg = new RegExp('abc')
+    const str = 'abc'
+    console.log(reg.test(str));
+    //正则表达式中的或
+    let reg1 = new RegExp('abc|bcd')
+    const str1 = 'ahcjkbcd'
+    console.log(reg1.test(str1));
+    let reg2 = RegExp('^[a-zA-Z]') //^中括号外表示匹配开头是这样的，在中括号内表非
+    const str3 = '11uwsuahj11aj'
+    reg3 = /[^a-zA-Z]/
+    console.log(reg2.test(str3));
+    console.log(reg3.test(str3));
+    reg4 = /./ //匹配换行外的任意字符
+    reg = /^a$/ //精确匹配 只能才可以通过
+  </script>
+</body>
+</html>

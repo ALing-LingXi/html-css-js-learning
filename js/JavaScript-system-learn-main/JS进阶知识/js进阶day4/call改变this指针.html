@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const obj ={
+      name:"xixi"
+    }
+    function fn(x,y){
+      console.log(this)
+    }
+    // 通过call来改变this指向 临时改变this
+    fn.call(obj,1,2)
+  </script>
+</body>
+</html>

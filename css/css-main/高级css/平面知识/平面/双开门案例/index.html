@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    .father{
+      width: 1360px;
+      height: 600px;
+      margin: 0px auto;
+      background-image: url("./bg.jpg");
+      display: flex;
+      overflow: hidden;
+    }
+    .son1,.son2{
+      width: 50%;
+      height: 600px;
+      background-image: url("./fm.jpg");
+      transition: all 1s;
+    }
+    .son2{
+      background-position: right 0;
+    }
+    .father:hover .son1{
+      transform: translateX(-100%);
+    }
+        .father:hover .son2{
+      transform: translateX(100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="son1"></div>
+    <div class="son2"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .bs{
+      max-width: 1350px;
+      height: 900px;
+      margin: 100px auto;
+      border: 1 solid red;
+      column-count: 4;
+      column-gap: 10px;
+    }
+    .ts{
+      background-color: pink;
+      height: 100px;
+      break-inside: avoid-column;
+      margin-bottom: 20px;
+    }
+    .ts:nth-child(8){
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bs">
+    <div class="ts">1</div>
+    <div class="ts">2</div>
+    <div class="ts">3</div>
+    <div class="ts">4</div>
+    <div class="ts">5</div>
+    <div class="ts">6</div>
+    <div class="ts">7</div>
+    <div class="ts">8</div>
+    <div class="ts">9</div>
+    <div class="ts">10</div>
+    <div class="ts">11</div>
+    <div class="ts">12</div>
+    <div class="ts">13</div>
+    <div class="ts">14</div>
+    <div class="ts">15</div>
+    <div class="ts">16</div>
+    <div class="ts">17</div>
+    <div class="ts">18</div>
+    <div class="ts">19</div>
+    <div class="ts">20</div>
+    <div class="ts">21</div>
+  </div>
+</body>
+</html>

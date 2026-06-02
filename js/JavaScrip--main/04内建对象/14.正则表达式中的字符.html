@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+ /*    正则表达式基础语法
+    1.普通字符大部分字符可以直接写，匹配自身。
+    2.|表示“或”
+    3.[]表示或字符集,匹配括号内任意一个字符。
+    示例：
+      [a - z]：任意小写字母
+      [A - Z]：任意大写字母
+      [a - zA - Z]：任意字母
+      [0 - 9]：任意数字
+    4.排除字符集[^ ]
+      表示“除了”，匹配不在括号内的任意字符。
+    示例：
+      [^ x]：除了 x 以外的任意字符
+    5.点号.
+      匹配除了换行符以外的任意字符。
+    6.转义字符 \
+    用于匹配特殊字符本身（如.、[等）。
+      7.预定义字符集
+      \w：任意单词字符，等同于[A-Za-z-0-9_]
+      \W：非单词字符，等同于[^ A-Za - z0 -9_]
+      \d：任意数字，等同于[0 - 9]
+      \D：非数字，等同于[^ 0 - 9]
+      \s：空白字符（如空格、制表符、换行符等）
+      \S：非空白字符
+      \b：单词边界
+      \B：非单词边界 */
+      let str1 = "abc"
+      let reg = RegExp('abc')
+      const result = reg.test(str1)
+      console.log(result);
+      reg = RegExp('abc|bcd')
+      str1 = 'bcdaASDd-'//必须是abc或bcd
+      console.log(reg.test(str1));
+      reg = RegExp('[^(a-zA-Z)]')
+      console.log(reg.test(str1));
+      str1 = 'abckkAAA'
+      reg = /[^a-z]/i  //匹配模式i忽略大小写
+      console.log(reg.test(str1));
+      reg = /./ //匹配换行外的任意字符
+      str1 = '\n'
+      console.log(reg.test(str1));
+      reg = /^a$/
+      str1 = 'abc'
+      console.log(reg.test(str1));
+      str1 = 'a'
+      console.log(reg.test(str1));
+      
+  </script>
+</body>
+
+</html>

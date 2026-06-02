@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div.e2{
+      position: relative;
+      left: 400px;
+      height: 1000px;
+      background-color: yellowgreen;
+    }
+    div.e1{
+      position: fixed;
+      right: 0px;
+      bottom: 0px;
+      background-color: yellowgreen;
+    }
+    div.e3{
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+    }
+    div.e4{
+      position: relative;
+      /* absolute 只对已经定位的父级元素生效，如果父级元素没有进行定位，那么它会参照body，并且脱离文档流可以和其他元素重合 */
+      width: 400px;
+      height: 300px;
+      border: 1px black dashed;
+    }
+    div.e5{
+      height: 200px;
+      border: 1px black solid;
+      position: sticky;
+      bottom: 200px;
+      /* top:200px; */
+    }
+    div.e6{
+      background-color: yellowgreen;
+      width: 200px;
+      height: 1000px;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div class="e2">哈哈哈</div>
+  <div class="e1">
+    xixibuxixi
+  </div>
+  <div class="e4">我是你爸
+     <div class="e3">buhahah</div>
+  </div>
+  <div class="e5">我是粘条，我来统治世界了，贝利亚已经被我打跑了，小朋友们都被吓哭了</div>
+  <div class="e6">技术宅拯救世界，我们的兔女郎只给洋大人跳舞</div>
+</body>
+</html>

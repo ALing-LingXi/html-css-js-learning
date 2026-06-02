@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <input type="text" class="bs1" value="林希">
+  <input type="text" class="bs2" value="希希不嘻嘻">
+  <input type="checkbox" class="bs3">
+  <button>加油加油加油</button>
+  <script>
+    const btn1 = document.querySelector(".bs1")
+    btn1.value="林希-波流卡"
+    const btn2 = document.querySelector(".bs2")
+    // btn1.innerHTML="改变不了"
+    // innerHTML无法改变表单的内容，所以我们只能通过value来改变
+    btn2.type="password"
+    const btn3 = document.querySelector(".bs3")
+    // 写true和false，隐式转化不符合我们专业的标准
+    btn3.checked=true 
+    const btn4 = document.querySelector("button")
+    // 默认是false是不禁用
+    btn4.disabled=false
+    btn4.disabled=true
+  </script>
+</body>
+</html>

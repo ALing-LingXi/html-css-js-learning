@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     通过Object创建的对象的问题
+    1.无法分辨不同对象的类型
+    2.批量创建对象非常麻烦
+
+    js中通过class类来解决这个问题
+    类是对象的模板，可以直接将对象的属性方法添加到类中
+    定义后可以直接通过类来创建对象 */
+    class person {
+
+    }
+    class dog{
+
+    }
+    const cat = class {}//这种方式书写比较麻烦
+
+    const d1 = new person()//通过调用构造函数创建对象
+    const p1 = new dog()
+    //instanceof通过判断是否是同一个类创建的对象来返回布尔值
+    console.log(d1 instanceof person);
+    console.log(p1 instanceof person);
+    
+    
+  </script>
+</body>
+</html>

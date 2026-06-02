@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<!--   两种运行模式
+  1.正常模式
+  默认运行模式
+  语法检查不严格：能不报错尽量不报错
+  缺点：代码运行性能较差
+  
+  2.严格模式
+  语法检查变得严格：
+  禁止一些语法
+  更容易报错
+  优点：提升代码运行性能
+
+  开发建议应该尽量使用严格模式
+  好处：
+  隐藏问题消灭在萌芽阶段提升代码运行性能 -->
+  <script>
+    'use strict'
+    // a=10//报错
+    let a = 10
+    function fn(){
+      'use strict'//在这个函数里面开启严格模式
+    }
+  </script>
+</body>
+</html>

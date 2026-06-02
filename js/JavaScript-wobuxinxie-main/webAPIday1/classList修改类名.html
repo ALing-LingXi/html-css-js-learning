@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bs{
+      color: red;
+      height: 200px;
+      width: 200px;
+    }
+    .active{
+      background-color: pink;
+      border: 10px solid black;
+    }
+    .tx{
+      text-shadow:10px 10px 10px blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="bs">
+qqqqqqqqqqq
+  </div>
+  <script>
+    const box = document.querySelector(".bs")
+    box.classList.add("active","tx")
+    // box.classList.remove("bs")
+    // box.classList.toggle("active")
+    // box.classList.toggle("bs")
+
+  </script>
+</body>
+</html>

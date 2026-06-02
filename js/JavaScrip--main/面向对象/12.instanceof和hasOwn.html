@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     instanceof 检查实例是否是同一个类创建
+    实际上是在原型链上查找原型对象中是否有类的实例
+    只要原型链上有则返回true 否则false
+    Object是所有对象的原型,所以Object进行instanceof都返回true */
+    class Animal{
+      sayHello(){
+        console.log('hello');
+      }
+    }
+    class Dog extends Animal{
+      sayRun(){
+        console.log('run');
+      }
+    }
+    const dog = new Dog()
+    console.log(dog instanceof Dog);
+    console.log(dog instanceof Animal);
+    console.log(dog);
+    console.log(Animal);
+    console.log(Dog);
+    console.log(dog.__proto__.__proto__ === Animal.prototype);
+    
+    console.log('-------------------------------');
+    console.log(dog);
+    console.log(dog.__proto__);
+    console.log(dog.__proto__.__proto__);
+    console.log(dog.__proto__.__proto__.__proto__);
+    console.log(dog.__proto__.__proto__.__proto__.__proto__);
+    
+    // 使用in检查符，无论对象是在本身还是原型，找到了都返回true
+    // 对象hasOwnProperty检查属性是否在对象自身
+    // 新版提供了静态方法hasOwn检查属性是否在对象自身(官方推荐) Object.hasOwn(对象，属性名)
+    console.log('sayHello' in dog);
+    console.log(dog.hasOwnProperty('sayHello'));
+    console.log(Object.hasOwn(dog, 'sayHello'));
+  </script>
+</body>
+</html>

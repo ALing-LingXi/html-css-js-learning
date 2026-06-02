@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     函数在作用域，在函数创建时就已经确定的(词法作用域)
+            和调用的位置无关
+    闭包利用的就是词法作用域 */
+    const b = 'text'
+    function fn(){
+      let a = 'haha'
+      console.log(a);
+    }
+    fn()//haha
+    function fn1 (){
+      const a = 'fn4'
+      function fn2(){
+        console.log(a);
+      }
+     return fn2
+    }
+    const c = fn1()
+    const e = c()
+    console.log(e);
+    
+
+  </script>
+</body>
+</html>

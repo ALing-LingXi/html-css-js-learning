@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      display: block;
+    }
+
+    .bs {
+      margin: 10px auto;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: all 1s linear;
+    }
+
+    .bs,
+    .front,
+    .after {
+      width: 300px;
+      height: 500px;
+      transform-style: preserve-3d;
+
+    }
+
+    .front {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("./img/6.jpg") 53%/cover no-repeat;
+      text-align: center;
+      border: 1px solid rgba(0, 0, 0, 0);
+      z-index: 1;
+      backface-visibility: hidden;
+    }
+
+    h3 {
+      width: 100%;
+      height: 30%;
+      margin-top: 300px;
+      background-color: rgba(0, 0, 0, 0.4);
+      line-height: 150px;
+      font-size: 32px;
+      color: white;
+      transform: translateZ(30px);
+      backface-visibility: hidden;
+
+    }
+
+    .after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: url("img/w.jpg") center/cover no-repeat;
+      border: 1px solid rgba(0, 0, 0, 0);
+      transform: rotateY(-180deg);
+      backface-visibility: hidden;
+
+    }
+
+    .bs:hover {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bs">
+    <div class="front">
+      <h3>FUCK YOU!</h3>
+    </div>
+    <div class="after">
+      <h3>没睡醒话给你两巴掌</h3>
+    </div>
+  </div>
+</body>
+
+</html>

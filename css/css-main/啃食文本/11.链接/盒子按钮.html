@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  /* 边框会继承color属性如果你不明确指定的话 */
+  a:link{
+    color: red;
+    text-decoration: none;
+    border: 3px dodgerblue solid;
+    /* 未访问 */
+  }
+  a:visited{
+    color: aqua;
+    text-decoration: none;
+  }
+  a:hover{
+    color: green;
+    text-decoration: underline;
+    font-size: 150%;
+    /* 悬停 */
+      background-color: rgb(205, 50, 128);
+  }
+  a:active{
+    color: white;
+    text-decoration: underline;
+    text-shadow:2px 2px 4px black, blue 0px 0px 25px,darkblue 0px 0px 5px ;
+  }
+  a{
+    display: inline-block;
+    padding: 16px 25px;
+    background-color: lightblue;
+    /* text-decoration: none; */
+    text-align: center;
+  }
+</style>
+<body>
+  <a href="#7">你说的对，这就是前端</a>
+</body>
+</html>

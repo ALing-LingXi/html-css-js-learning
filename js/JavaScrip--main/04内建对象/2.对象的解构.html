@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const person ={name:'linxi',age:18,gender:'female'}
+    const person1 ={name1:'lin',age1:18,gender1:'female'}
+
+    let {name,age,gender} = person
+    console.log(name,age,gender);
+    let name1,age1,gender1
+    ({name1,age1,gender1} = person1) //属性名一定要匹配才能获取解构的元素，否则undefined
+    console.log(name1,age1,gender1);
+    let {name:a,age:b,gender:c} = person//:为name age gender取了别名a,b,c
+    console.log(a,b,c);
+    
+  </script>
+</body>
+</html>

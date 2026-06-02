@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     当使用new去调用一个函数的时候，这个函数会作为构造函数被调用
+    使用new调用函数时会发生如下的事情
+    1.创建一个普通的js对象(Object对象{})，为了方便称其为新对象
+    2.将构造函数的prototype属性设置为新对象的原型
+    3.使用实参(有就用，没有就不用)来执行构造函数，并且将新对象设置为函数中的this
+    4.如果构造函数返回的是一个非原始值，那么该值会作为new运算符的返回值返回(千万不要这么做)
+    如果构造函数返回的是一个非原始值或没有指定返回值，则新对象会作为返回值返回
+    通常不会为构造函数指定返回值 */
+    function MyClass(){
+      var newInstance = {}
+      newInstance.__proto__ = MyClass.prototype
+      // this的绑定解释器会自动处理
+      this.sayHello = function(){
+        console.log(this);
+      }
+    }
+    var p = new MyClass()
+    console.log(p);
+    p.sayHello();
+    
+  </script>
+</body>
+</html>

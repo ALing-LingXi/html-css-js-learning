@@ -1,0 +1,161 @@
+:root {
+  --green: #16C2A3;
+  --color1: #121826;
+  --color2: #C3C3C5;
+  --color3: #16C2A37F;
+  --color4: #3C3E42;
+  --padding: .4rem;
+}
+body{
+  padding-top: 1.28rem;
+}
+.nav-bar {
+  width: 100%;
+  height: 1.28rem;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.28rem;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  background-color: #fff;
+}
+
+.nav-bar .back {
+  font-size: .4533rem;
+  padding: 0rem .4rem;
+}
+
+.nav-bar .regester {
+  font-size: .4533rem;
+  color: var(--green);
+  padding: 0rem .4rem;
+  font-weight: medium;
+}
+
+.header {
+  display: flex;
+  padding: .6667rem var(--padding) 1.2rem;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.header h1 {
+  font-weight: 580;
+  font-size: .64rem;
+  line-height: .96rem;
+  color: var(--color1);
+}
+
+.header a {
+  text-decoration: none;
+  font-size: .4rem;
+  color: var(--color4);
+}
+
+.bs {
+  height: 1.3733rem;
+  padding: .4rem .4rem;
+  position: relative;
+}
+
+.bs input {
+  font-size: .3733rem;
+  color: var(--color1);
+  width: 100%;
+  display: block;
+}
+
+.bs input::placeholder {
+  font-size: .3733rem;
+  color: var(--color2);
+}
+
+.bs img {
+  width: .4rem;
+  height: .4rem;
+  position: absolute;
+  top: .48rem;
+  right: .4267rem;
+  vertical-align: middle;
+}
+
+
+.bs2 {
+  padding: .4rem .4rem .56rem;
+  font-size: .3467rem;
+}
+
+.bs2 .iconfont {
+  font-size: .4267rem;
+  color: var(--color2);
+}
+
+.bs2 a {
+  text-decoration: none;
+  color: var(--color3);
+}
+
+form button {
+  padding: 0;
+  width: 9.2rem;
+  height: 1.1733rem;
+  margin: 0rem .4rem;
+  border-radius: .5867rem;
+  background: #FAFAFA;
+  margin-bottom: .4rem;
+  text-align: center;
+  line-height: 1.1733rem;
+  font-size: .8533rem;
+}
+
+.help {
+  text-align: center;
+}
+
+.help a {
+  font-size: .3733rem;
+  line-height: .5333rem;
+  color: var(--color2);
+  text-decoration: none;
+}
+
+
+
+.bs3 {
+  margin: 0 auto;
+  width: 5.3333rem;
+  height: 1.7333rem;
+  text-align: center;
+  margin-top: 5.3333rem;
+  margin-bottom: 1.8667rem;
+}
+.bs4{
+  display: flex;
+  width: 5.3333rem;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+.bs4 p {
+  height: .48rem;
+  font-size: .32rem;
+  line-height: .48rem;
+  width: 2.2933rem;
+  color: var(--color2);
+}
+
+.bs4::before,
+.bs4::after {
+  background-color: var(--color2);
+  flex: 1;
+  height: .0267rem;
+  content: "";
+}
+
+.bs3 img{
+  width: .8rem;
+  height: .8rem;
+  margin-top: .3867rem;
+}

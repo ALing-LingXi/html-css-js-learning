@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+/*       继承：通过extends关键字完成继承
+      当一个类继承另一个类时，相当于代码复制过去(简单理解)
+      发生继承时，被继承的叫作父类(超类)，继承的叫做子类
+      继承减少了代码的重复率，并且可以在不改变一个类的情况下进行扩展 */
+      // opc原则:修改关闭,扩展开放：继承则满足了这个需求
+      class animal{
+        constructor(name){
+          this.name = name
+        }
+        sayHello(){
+          console.log('动物的叫声');
+        }
+      }
+      class cat extends animal{
+        constructor(name,age,gender){
+          super(name)//重写构造函数的话，要添加super调用父类构造函数
+                 //来创建父类对象，才能进行继承操作
+          this.age = age
+          this.gender = gender
+          }
+        sayHello() {
+          console.log('喵喵喵');//不符合需求的方法可以进行重写
+          super.sayHello()
+        }
+
+      }
+      class dog extends animal{
+        sayHello() {
+          console.log('汪汪汪');//不符合需求的方法可以进行重写
+        }
+      }
+      const d1 = new dog('dog')
+      const d2 = new cat('cat',18,"母")
+      console.log(d1);
+      console.log(d2);
+      
+      d1.sayHello()
+      d2.sayHello()
+    </script>
+  </body>
+  </html>
+</body>
+</html>

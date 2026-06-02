@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let arr =['lin','linxi','linxier','xixiixiix']
+    for(let i =0 ; i<arr.length; i ++){
+      console.log(arr[i]);
+    }
+    arr[arr.length] = 'yeuye'
+    arr[arr.length] = 'ziyoudetiankong'
+    console.log(arr);
+    arr[100] =2//这样写也不会报错，没有数据储存undefined，但是很浪费资源。
+    
+  </script>
+</body>
+</html>

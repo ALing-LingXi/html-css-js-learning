@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     windou对象:浏览器中为我们内置一个window对象，可以直接访问
+    window代表的是浏览器的窗口，我们可以通过修改window对象对浏览器窗口进行各种操作
+    window对象也负责储存js的内置对象和浏览器的宿主对象：列如 String(),Number()
+    windou对象的属性可以通过window.访问，也可以直接访问
+    全局函数可以认为是window对象的方法(使用function创建的全局函数都是window对象的方法)
+    在windou对象添加属性会自动转化为全局变量 */
+    alert(3)
+    window.alert(3)
+    window.a = 3
+    // 在全局中用var进行声明作用和let差不多，但是var没有块级作用域(有函数作用域)var创建的变量都会储存到window里面
+    var b = 10
+    alert(window.b)
+    function fn(){
+      alert("哈哈")
+    }
+    window.fn()
+    //用let声明的变量会储存在一个秘密的地方，无法访问，而不是在window对象中，提高了安全性
+    function fn1(){
+      c=3  //局部域中没有使用let var声明的变量会自动转化成window对象的属性（window.c=3）非常不建议这样写
+    }
+    fn1()
+    console.log(c);
+  </script>
+</body>
+</html>

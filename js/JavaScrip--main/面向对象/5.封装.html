@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     对象的封装我们要达到的目的
+    -----》保证数据的安全
+    我们可以通过私有化来保护我们的数据防止被任意修改 */
+    class person{
+      //私有属性只能在类内部访问
+      #name//一定要先声明,才能在对象内部调用
+      #age
+      #gender
+      constructor(name,age,gender){
+        this.#name = name
+        this.#age = age 
+        this.#gender = gender
+      }
+      get getAge(){
+        return this.#age//提供获取数据的方法
+      }
+      set setAge(age){
+        if(age>0&&age<=120)
+        this.#age = age//提供修改对象的方法
+      }
+      sayHello(){
+        console.log(this);
+        console.log(this.#name);
+        console.log(this.#age);
+        console.log(this.#gender);
+      }
+    }
+    const d1 = new person('linxi',18,'女')
+    d1.sayHello()
+  </script>
+</body>
+</html>

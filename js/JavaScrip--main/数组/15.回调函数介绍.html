@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     一个函数的参数可以是函数
+    如果将函数作为参数传递，那么我们就称这个函数为回调函数(callback) */
+    function fn(arr,cb){
+      const arr1 = []
+      for(let i of arr){
+        if (cb(i)){
+          arr1.push(i)
+        }
+      }
+      return arr1
+    }
+    function cb(arr){
+      return arr.age<18
+    }
+    const arr2 = [{name:'linxi',age:18},{name:'xixi',age:15},{name:'Aling',age:12}]
+    const arr3 = fn(arr2,cb)
+    console.log(arr3);
+    
+  </script>
+</body>
+</html>

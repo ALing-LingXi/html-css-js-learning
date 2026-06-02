@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // split 把字符串转化为数组
+    const str="态度是心的面具,态度带久了,自我也就变了"
+    const str2 = str.split(",")
+    console.log(str2);
+    // substring 字符串的截取
+    const str3 = str.substring(8,13)
+    console.log(str3)
+
+    // startsWith 判断是不是由某个字符集开头
+    console.log(str.startsWith("态度是心的面具"))
+    console.log(str.startsWith("态度带久了",8))
+    console.log(str.startsWith("态度带久了",9))
+    // includes 判断某个字符串是不是包含在一个字符串里面
+    console.log(str.includes("自我也就变了"))
+  </script>
+</body>
+</html>

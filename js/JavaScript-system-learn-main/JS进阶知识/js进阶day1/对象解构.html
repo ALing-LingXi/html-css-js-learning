@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let {name,age} = {name:"xixi",age:19}
+    // console.log(name,age)
+    //     const pig = [
+    //       {
+    //         uname: '佩奇',
+    //         age: 6
+    //       }
+    //     ]
+    // const [{uname,age}] =pig
+    // console.log(uname,age)
+
+    const pig = {
+      name:"linxi",
+      family :{
+        name:"adaw",
+        age:"12"
+      }
+    }
+    const {name:hostname,family:{name,age}} =pig
+    console.log(name,age,hostname)
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .bs {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin: 100px auto;
+      perspective: 1000px;
+      transition: all 2s;
+    }
+
+    .f1 {
+      width: 200px;
+      height: 200px;
+      background-color: yellowgreen;
+      text-align: center;
+      line-height: 200px;
+      font-size: 24px;
+      color: white;
+      transition: all 1s;
+      z-index: 1;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+
+    }
+
+    .f2 {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      text-align: center;
+      line-height: 200px;
+      font-size: 24px;
+      color: white;
+      transform: rotateY(180deg) ;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: all 1s;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+
+    }
+    .bs:hover .f1{
+      transform: rotateY(-180deg);
+    }
+    .bs:hover .f2{
+      transform: rotateY(0deg);
+    }
+    .f1 h3{
+      backface-visibility: hidden;
+      transform: translateZ(60px);
+    }
+    .f2 h3{
+      backface-visibility: hidden;
+      transform: translateZ(60px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bs">
+    <div class="f1"><h3>首页</h3></div>
+    <div class="f2"><h3>背面</h3></div>
+  </div>
+</body>
+
+</html>

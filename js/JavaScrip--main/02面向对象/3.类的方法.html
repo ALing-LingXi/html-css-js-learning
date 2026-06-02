@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class person{
+      name ='林歌'//实例方法this指向实例对象
+      //实例方法，
+      sayHello = function(){
+        console.log(this);
+      }
+      //这种写法更常见但是控制台打印不会显示
+      sayHey(){
+        console.log('Hey'+this.name);
+      }
+      //静态方法，通过类对象访问，this指向类对象
+      static SayEnd(){
+        console.log(this);
+      }
+    }
+    const d1 = new person()
+    d1.sayHello()
+    d1.sayHey()
+    person.SayEnd()
+  </script>
+</body>
+</html>

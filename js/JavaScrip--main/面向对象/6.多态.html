@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 多态
+/*     1.js中不会检查参数的数据类型，所以我们可以传递任意数据作为参数
+    2.要调用函数，无需指定类型，只需要满足某些特定条件即可
+    ——多态为我们带来了灵活性 */
+    class Dog{
+      name = '阿达'
+    }
+    class Person{
+      name = 'Alice'
+    }
+    function sayHello(obj){
+      console.log(obj.name);
+    }
+    const person = new Person()
+    const dog = new Dog()
+    sayHello(person)
+    sayHello(dog)
+
+  </script>
+</body>
+</html>

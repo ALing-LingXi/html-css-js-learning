@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     JavaScript 对象的序列化
+一、定义
+在 JS 中，对象使用时都存在于计算机的 内存 中。
+序列化：将对象转换为可以存储或传输的格式。
+在 JS 中通常指：将对象转换为 JSON 字符串。
+
+二、序列化的用途
+数据交换：
+对象 → JSON 字符串 → 在不同编程语言之间传递。
+配置文件：
+直接用 JSON 文件保存数据，读取时再转换为对象。
+持久化：
+比如把对象序列化后存储到本地（localStorage / 数据库）。
+
+三、如何进行序列化
+JS 内置工具类：JSON（JavaScript Object Notation）。
+核心方法：
+const obj = { name: "Alice", age: 20 };
+const jsonStr = JSON.stringify(obj);  // 对象 -> JSON字符串
+console.log(jsonStr);  // '{"name":"Alice","age":20}'
+const newObj = JSON.parse(jsonStr);   // JSON字符串 -> 对象
+console.log(newObj);   // { name: 'Alice', age: 20 }
+
+四、手动编写 JSON 字符串
+JSON 有两种基本形式：
+对象：{ }
+数组：[ ]
+JSON 书写规则
+属性名必须用 双引号。
+{ "name": "Alice" }
+
+
+可用的数据类型：
+数字（Number）
+字符串（String，必须双引号）
+布尔值（true/false）
+空值（null）
+对象（{ }）
+数组（[ ]）
+
+属性的最后一项 不能有逗号。
+ 正确：
+{"name": "Alice","age": 20
+}
+ 错误：{"name": "Alice","age": 20,}
+
+五、JSON 与 JS 对象的区别
+基本结构类似（花括号 / 方括号）。
+区别点：
+JSON 属性名必须用 双引号；JS 对象可用单引号或不加引号。
+JSON 只支持有限的数据类型；JS 对象可以包含函数、undefined 等。 */
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box1{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: yellowgreen;
+      position: absolute;
+    }
+    #box2{
+      width: 400px;
+      height: 400px;
+      background-color: rgb(50, 205, 143);
+    }
+  </style>
+</head>
+<body>
+  <div id="box1"></div>
+  <div id="box2"></div>
+  <script>
+    //让一个小绿球跟随鼠标的移动
+    //事件冒泡和元素的样式无关，只与结构有关
+    const box1 = document.querySelector('#box1')
+    document.addEventListener('mousemove',function(){
+      box1.style.left = event.x+'px'
+      box1.style.top = event.y+'px'
+    })
+    const box2 = document.querySelector("#box2")
+    box2.addEventListener('mousemove',function(){
+      event.stopPropagation()//停止事件冒泡
+    })
+  </script>
+</body>
+</html>

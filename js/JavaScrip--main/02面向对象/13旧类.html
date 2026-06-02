@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 用IIFE集中定义类、原型方法和静态属性/方法
+    (function() {
+      function Person(name, age){
+        this.name = name;
+        this.age = age;
+      }
+      Person.prototype.sayHello = function () {
+        console.log("hello");
+      };
+      Person.staticProperty = 'xxxx';
+      Person.staticMethod = function () {
+        console.log('I am static');
+      };
+
+      // 挂到全局，方便外部访问
+      window.Person = Person;
+    })();
+
+    // 测试
+    const p = new Person('张三', 18);
+    p.sayHello(); // 输出 hello
+    console.log(Person.staticProperty); // 输出 xxxx
+    Person.staticMethod(); // 输出 I am static
+
+    // 旧类继承
+    function Animal(){
+      this.name = '动物'
+    }
+    function Dog(){}
+
+    // 正确的继承写法：让Dog的原型指向Animal的实例
+    Dog.prototype = new Animal();
+    Dog.prototype.constructor = Dog; // 修正constructor指向
+
+    const dog = new Dog();
+    console.log(dog); // Dog { name: '动物' }
+    console.log(dog instanceof Dog);    // true
+    console.log(dog instanceof Animal); // true
+    console.log(dog.name);              // '动物'
+
+    const animal = new Animal();
+    console.log(animal);
+  </script>
+</body>
+</html>

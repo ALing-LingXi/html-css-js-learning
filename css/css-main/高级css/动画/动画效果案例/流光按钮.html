@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+
+    }
+      body{
+      background-color: #1e1f26;
+      }
+
+    .bs {
+      position: relative;
+      display: flex;
+      width: 200px;
+      height: 100px;
+      margin: 100px;
+      text-align: center;
+      line-height: 100px;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #333;
+      border-radius: 10px;
+      overflow: hidden;
+      color: white;
+    }
+
+    .bs::before {
+      position: absolute;
+      content: "";
+      width: 500px;
+      height: 500px;
+      background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+      animation: rotate 1s infinite linear;
+      z-index: -1;
+    }
+
+    .bs::after {
+      background-color: black;
+        border-radius: 10px;  
+      position: absolute;
+      content: "";
+      inset: 3px;
+      z-index: -1;
+    }
+
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bs">
+    渐变框内容
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!-- 有时，两个外边距会折叠成一个单独的外边距。
+
+外边距折叠
+元素的顶部和底部外边距有时会折叠成一个单独的外边距，该外边距等于两个外边距中较大的那个
+这种情况不会发生在左右外边距上！只发生在顶部和底部外边距上！ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width='device-width', initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .one {
+      background-color: tomato;
+      margin: 0px 0px 50px 0px;
+    }
+
+    .two {
+      background-color: dodgerblue;
+      margin: 100px 0px 0px 0px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <p class="one">发生外边距折叠只有100px</p>
+  <p class="two">发生外边距折叠只有100px</p>
+
+</body>
+
+</html>

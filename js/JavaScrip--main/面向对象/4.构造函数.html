@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     在类中我们可以创建一个特殊的方法constructor
+    这种方法我们叫做构造函数(构造方法)
+    它会在我们用类创建对象的时候调用
+    可以在构造函数中为实例对象赋值
+    构造函数的this指向当前创建的对象 */
+    class person{
+      constructor(name,age,gender){
+        this.name = name
+        this.age = age
+        this.gender = gender
+        
+      }
+    }
+    const d1 = new person('linxi',18,'女')
+    console.log(d1.name,d1.age,d1.gender);
+    const d2 = new person('xixibuxixi',19,'女')
+    console.log(d2.name,d2.age,d2.gender);
+  </script>
+</body>
+</html>

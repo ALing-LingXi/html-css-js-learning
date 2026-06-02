@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     for of语句可以用来遍历可迭代对象
+    语法：for(变量 of 可迭代对象){
+      语句.....
+    }
+    执行流程：
+    for-of的循环体执行多次，数组元素有几个就会执行几次
+    每次执行时都会将一个元素赋值给变量 */
+    let arr = [{name:'linxi'},{name:'xixi'},{name:'xixixiixi'}]
+    let arr1 =[1,2,3,4,5,6,7]
+    let string ='linxiera'
+    for(let i of arr){
+      console.log(i);
+    }
+    for (let i of arr1) {
+      console.log(i);
+    }
+    for(let i of string)
+    {
+      console.log(i);
+    }
+  </script>
+</body>
+</html>

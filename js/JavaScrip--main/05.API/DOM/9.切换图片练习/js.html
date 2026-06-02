@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .outer{
+      width: 1256px;
+      text-align: center;
+      margin: 50px auto;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <p id="p"></p>
+    <div class="img">
+      <img src="1.jpg " alt="这是一张图片" >
+    </div>
+    <div class="button">
+      <button id="prev">上一张</button>
+      <button id="next">下一张</button>
+    </div>
+  </div>
+  <script>
+    let count = 0
+    let imgs = ['1.jpg','2.jpg','3.jpg','4.jpg']
+    const img = document.querySelector('img')
+    const button1 = document.querySelector('#prev')
+    const button2 = document.querySelector('#next')
+    img.src =imgs[count]
+    const p = document.querySelector('#p')
+    p.innerText =`一共有${imgs.length}张，这是第${count+1}张`
+    button1.onclick = function fn(){
+      count--
+    if(count<0){
+      count = imgs.length-1
+    }
+    p.innerText =`一共有${imgs.length}张，这是第${count+1}张`
+    img.src =imgs[count]
+    }
+      button2.onclick = function fn(){
+      count++
+    if(count>imgs.length-1){
+      count = 0
+    }
+      p.innerText =`一共有${imgs.length}张，这是第${count+1}张`
+        img.src =imgs[count]
+    }
+  </script>
+</body>
+</html>

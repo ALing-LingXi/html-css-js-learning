@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      function fn(num){
+        if(num<3){
+          return 1
+        }
+        return fn(num-1)+fn(num-2)
+      }
+      const number = fn(5)
+      console.log(number);//递归的最大弊端就是很废空间。
+      
+  </script>
+</body>
+</html>

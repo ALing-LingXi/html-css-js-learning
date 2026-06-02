@@ -1,0 +1,83 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul li{
+      display: inline;
+      padding: 8px;
+      background-color: yellowgreen;
+      /* margin: 0px; */
+    }
+    ul{
+      background-color: #b2b2f2b2;
+      list-style-type: none;
+    }
+    ul>li>a{
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<ul>
+  <li><a href="">首页</a></li>
+  <li><a href="">新闻</a></li>
+  <li><a href="">我们</a></li>
+</ul>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style-type: none;
+      background-color: #333;
+      /* overflow: hidden; */
+      display: flow-root;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    ul>li {
+      float: left;
+      padding: 8px;
+      /* margin: 0px; */
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+    }
+
+    ul>li>a {
+      color: white;
+      text-decoration: none;
+    }
+
+    ul>li:nth-child(1) {
+      background-color: #04AA6D;
+    }
+
+    li:not(:first-child) a:hover {
+      background-color: #111;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li class="one"><a href="">关于</a></li>
+    <li><a href="">新闻</a></li>
+    <li><a href="">我们</a></li>
+  </ul>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!-- margin-top
+margin-right
+margin-bottom
+margin-left -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      /* margin: 100px auto; */
+      margin: auto auto;
+      background-color: #ddd;
+      color: tomato;
+    }
+    p.ha{
+      margin: inherit;
+      color: inherit;
+    }
+    /* inherit 值
+此示例允许 <p class="ex1"> 元素的左外边距从父元素 (<div>) 继承 */
+
+    /* p{
+      width: 200px;
+      height: 200px;
+      margin: auto auto;
+      background-color: #ddd ;
+    } */
+  </style>
+</head>
+
+<body>
+  <div class="ha"><p>Hello,world</p></div>
+  <!-- <p>haha</p> -->
+</body>
+
+</html>

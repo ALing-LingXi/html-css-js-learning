@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bs{
+      width: 200px;
+      height: 100px;
+      background-color: pink;
+      margin: 0 auto;
+      mask-image: linear-gradient(rgb(255,255,255) 80%, rgba(255,255,255,0) 100%);
+    }
+      .box {
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(red, blue);
+    
+    /* 底部 20% 逐渐透明消失 */
+    -webkit-mask-image: linear-gradient(black 80%, transparent 100%);
+    mask-image: linear-gradient(black 80%, transparent 100%);
+  }
+  </style>
+</head>
+<body>
+  <div class="bs"></div>
+</body>
+</html>

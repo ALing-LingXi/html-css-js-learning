@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+ /*  一.函数的this：收到函数调用方式的影响
+  分为两种情况
+  1.直接调用函数，this指向window
+  2.调用对象的方法，this指向调用方法的对象
+  其实都是同一种情况：this指向调用该函数的对象
+  二.箭头函数的this与调用函数的方法无关，
+  箭头函数没有自己的this，它的this由外层作用域决定 */
+
+  //函数直接调用---相当于window.fn()
+  function fn(){
+    console.log(this)//指向window
+  }
+  fn()
+  //调用通过方法调用函数
+  const fn1 ={
+    name:'张三',
+    fn,
+    sayHello(){
+      console.log(this)//指向fn1
+    }
+  }
+  fn1.sayHello()
+
+  //箭头函数的例子
+  const fn2={
+    name:'赵四',
+    sayHello(){
+      function sayHello(){
+        console.log(this)
+      }
+      sayHello()//指向window
+      const fn3=() =>{console.log(this)}
+      fn3()//指向fn2
+    }
+  }
+  fn2.sayHello()
+</script>
+</body>
+</html>

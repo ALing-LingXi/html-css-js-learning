@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+/*     访问原型对象的方法
+      1.obj.__proto__
+      2.Object.getPrototypeOf(对象)
+    原型对象的数据
+      1.constructor
+      2.对象中的数据和方法
+      注意；
+      原型对象也有原型, 这样就形成了原型链,
+      根据对象的复杂程度,原型链的长度也不同
+      p的原型链:p对象->原型->原型的原型->null
+      obj的原型: obj对象->原型->null
+
+      原型链:查询属性的时候会优先在自身查找
+      如果找不到则取去对象的原型中查找，以此类推
+      直到object的原型还没找到则返回undefined */
+      class Person{
+        sayHello(){
+          console.log(我在原型对象);
+          name ='希希'
+        }
+      }
+      const obj ={name:"obj"}
+      const p = new Person()
+      console.log(Object.getPrototypeOf(p));
+      console.log(p.__proto__);//这样写方便但是不安全
+      console.log(p.__proto__.__proto__);
+      console.log(p.__proto__.__proto__.__proto__);
+      console.log('------------------------');
+      console.log(obj.__proto__);
+      console.log(obj.__proto__.__proto__);
+      
+      
+      
+</script>
+</body>
+</html>

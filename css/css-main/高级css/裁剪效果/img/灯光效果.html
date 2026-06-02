@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      background-color: #1f1e1e;
+
+    }
+
+    img {
+      display: block;
+    }
+
+    .bs {
+      position: relative;
+      margin: 0 auto;
+      width: 700px;
+      height: 100px;
+      color: white;
+      font-size: 60px;
+      line-height: 100px;
+      text-align: center;
+      letter-spacing: 20px;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .bs::after {
+      position: absolute;
+      content: "HELLOWORLD";
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background: Linear-gradient(to right, #ff69b3, #fe8000, #ffa401, #ffff01, #008102, #40e1d2, #410898, #9400d4);
+      background-clip: text;
+      color: transparent;
+      clip-path: circle(10% at 0 50%);
+      animation: move 2s infinite linear alternate;
+    }
+
+    @keyframes move {
+      100% {
+        clip-path: circle(10% at 100% 50%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bs">
+    HELLOWORLD
+  </div>
+</body>
+
+</html>

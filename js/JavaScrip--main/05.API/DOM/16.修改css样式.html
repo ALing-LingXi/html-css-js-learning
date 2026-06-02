@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box {
+      width: 200px;
+      height: 300px;
+      background-color: aquamarine !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box"></div>
+  <button id="btn">点我一下</button>
+  <script>
+    const button = document.getElementById('btn')
+    const div = document.getElementById('box')
+    button.onclick = function () {
+      // 修改box1的样式
+      // 修改样式的方式：元素.style.样式名 = 样式值
+      // 如果样式名中含有-，则需要将样式表修改为驼峰命名法
+      // background-color --> backgroundColor
+      // !important 最高优先级，有这个js都改不动元素属性，所以慎用
+      div.style.backgroundColor = 'red'//加内联
+      div.style.width = 'auto'
+    }
+  </script>
+</body>
+
+</html>

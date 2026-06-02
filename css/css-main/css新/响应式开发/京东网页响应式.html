@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .bs {
+      width: 80%;
+      display: flex;
+      border: 1px solid red;
+      margin: 0px auto;
+      flex-wrap: wrap;
+      max-width: 1800px;
+      min-width: 1200px;
+    }
+
+    .item {
+      flex: 1;
+      height: 120px;
+      max-width: calc(16.6666667% - 16px);
+      min-width: calc(16.6666667% - 16px);
+      background-color: pink;
+      margin: 0px 8px 16px;
+    }
+
+    @media screen and (min-width:1536px) {
+      .item {
+        max-width: calc(16.6666667% - 16px);
+        min-width: calc(16.6666667% - 16px);
+      }
+    }
+
+    @media screen and (min-width:1316px) and (max-width:1536px) {
+      .item {
+        max-width: calc(20% - 16px);
+        min-width: calc(20% - 16px);
+      }
+    }
+
+    @media screen and  (max-width:1316px) {
+      .item {
+        max-width: calc(25% - 16px);
+        min-width: calc(25% - 16px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bs">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+</body>
+
+</html>

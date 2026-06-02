@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     所有的同类对象都有同一个原型
+    原型的作用
+    原型相当于一个公共实例，可以被所有实例类访问
+    将公共的属性和方法添加到原型中，可以减少代码的重复
+    这样我们只需要创建一个属性或方法变可以被所有实例访问
+    子类继承父类，本质上是子类的原型对象就是一个父类的实例(系统创建的匿名实例，并非手动创建的具体实例) */
+    
+    // 这里拿p作为例子：
+ // 原型链：
+// 原型链：
+  // p.__proto__ === person.prototype
+  // p.__proto__.__proto__ === God.prototype
+  // p.__proto__.__proto__.__proto__ === Object.prototype
+  // p.__proto__.__proto__.__proto__.__proto__ === null
+    class God{
+      name='god'
+      sayHello(){('我便是自己的神')}
+    }
+    class Person extends God{
+      name='person'
+      
+    }
+    const god = new God()
+    const person = new Person()
+
+    console.log('打印person的原型链');
+    console.log(person);
+    console.log(person.__proto__);
+    console.log(person.__proto__.__proto__);
+    console.log(person.__proto__.__proto__.__proto__);
+    console.log(person.__proto__.__proto__.__proto__.__proto__);
+    console.log('---------------------------');
+    console.log(Person.prototype === person.__proto__);
+    console.log(god.__proto__ === person.__proto__.__proto__);
+    console.log(god.__proto__.__proto__ === person.__proto__.__proto__.__proto__);
+    console.log('------------------------------------');
+    console.log(God.prototype === person.__proto__.__proto__);
+    console.log(God.prototype === god.__proto__);
+    
+    console.log(god.__proto__);
+    console.log(god.__proto__.__proto__);
+    console.log(god.__proto__.__proto__.__proto__);
+    console.log("疑问区域");
+    console.log(person.__proto__ === Person.prototype);
+    console.log(person.__proto__.__proto__ === god.__proto__);
+    console.log(person.__proto__.__proto__.__proto__ === god.__proto__.__proto__);
+    
+    </script>
+</body>
+</html>

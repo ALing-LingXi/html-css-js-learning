@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1.搞清楚是改变值还是改变对象
+    function fn(a){
+      a={}//创建了另一个对象，传来的对象与这个对象不关联，少了这句，则会改变原来的对象
+      console.log(a);
+      a.name = 'xixi'
+      console.log(a);
+
+    }
+    let obj1 = {name:'linxi'}
+    fn(obj1)
+    console.log(obj1);
+    // -------------
+  
+    // 调用的方法
+    // 1.这样调用两个对象都是独立的，互不影响。
+    // function fn1(a={name:'xixier'}){
+    //   console.log(a.name);
+    //   a.name='linlinxi'
+    //   console.log(a.name);
+    // }
+    // fn1()
+    // fn1()
+
+    //这样写则两个对象有关联
+    let obj2 = {name:'xixidada'}
+       function fn1(a = obj2) {
+          console.log(a.name);
+          a.name = 'linlinxi'
+          console.log(a.name);
+        }
+        fn1()
+        fn1()
+  </script>
+</body>
+</html>

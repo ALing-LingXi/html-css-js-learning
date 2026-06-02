@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+       width: 300px;
+      height: 300px;
+      background-color: greenyellow;
+      margin: 50PX;
+      padding: 50px;
+      border: solid 10px red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <button id="btn"></button>
+  <script>
+    const box = document.getElementsByClassName('box')[0]
+/*事件对象 (Event Object)
+    定义：
+    事件对象是由浏览器在事件触发时所创建的对象
+    这个对象中封装了事件相关的各种信息
+    
+    作用：
+    通过事件对象可以获取到事件的详细信息
+    例如：鼠标的坐标、键盘的按键等
+    
+    使用方法：
+    浏览器在创建事件对象后，会将事件对象作为响应函数的参数传递
+    可以在事件的回调函数中定义一个形参来接收事件对象
+    与函数的形式和调用的方式无关 */
+    box.onmousemove = function (event){
+      console.log(event);
+      box.textContent = event.clientX+","+event.clientY
+    }
+  </script>
+</body>
+
+</html>

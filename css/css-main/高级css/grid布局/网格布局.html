@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .bs{
+      max-width: 1760px;
+      height: 900px;
+      border: 1px solid black;
+      margin: 100px auto;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 10px;
+      grid-template-rows: repeat(2,1fr);
+      grid-auto-flow: column;
+    }
+    .bs div{
+      background-color: pink;
+    }
+    .bs div:first-child{
+      grid-row: 1/span 2;
+    }
+    .bs div:nth-child(3){
+      grid-column:2/4;
+      grid-row: 2/3;
+    }
+    .bs img{
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="bs">
+    <div><img src="./img/tree1.jpg" alt=""></div>
+    <div><img src="./img/tree2.jpg" alt=""></div>
+    <div><img src="./img/tree3.jpg" alt=""></div>
+    <div><img src="./img/tree4.jpg" alt=""></div>
+  </div>
+</body>
+</html>

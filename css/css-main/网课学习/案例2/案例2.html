@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul>li {
+      list-style: none;
+    }
+
+    .news {
+      background-color: #fff;
+      width: 354px;
+      height: 180px;
+      margin: 100px auto;
+    }
+
+    .head {
+      background-color: #eee;
+      border: 1px #dbdee1 solid;
+      height: 34px;
+      border-left: 0px;
+    }
+
+   .head a {
+      display: block;
+      height: 34px;
+      width: 48px;
+      background-color: #fff;
+      border-top: 3px solid #ff8400;
+      border-right: 1px solid #dbdee1;
+      color: #333;
+      margin: -1px;
+      text-align: center;
+      line-height: 32px;
+    }
+    .body{
+      padding: 5px;
+    }
+.body li{
+  background: url("./square.png") no-repeat 0 center;
+  padding-left: 15px;
+}
+.body li a{
+  background: url("./img.gif") no-repeat 0 center;
+  padding-left: 20px;
+  font-size: 12px;
+  line-height: 24px;
+  color: #666;
+}
+.body li a:hover{
+  background-color: #ff8400;
+}
+  </style>
+</head>
+
+<body>
+  <div class="news">
+    <div class="head">
+      <a href="#">新闻</a>
+    </div>
+    <div class="body">
+      <ul>
+        <li><a href="">法国赌神</a></li>
+        <li><a href="">我要验牌</a></li>
+        <li><a href="">给我擦皮鞋</a></li>
+        <li><a href="">牌没问题</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

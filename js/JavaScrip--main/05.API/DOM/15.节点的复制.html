@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="btn">点我一下</button>
+  <ul id="one">
+    <li id="name1">孙悟空</li>
+    <li id="name2">猪八戒</li>
+    <li id="name3">沙僧</li>
+  </ul>
+  <ul id="two">
+    <li id="tname">哈哈</li>
+  </ul>
+  <script>
+    const button = document.getElementById('btn')
+    button.onclick = function () {
+      const ul1 = document.getElementById('one')
+      const li = ul1.firstElementChild//firstChild会获取第一个子节点，空白是节点很坑
+      const newli = li.cloneNode(true)
+/*       使用 cloneNode() 方法对节点进行复制时，它会复制节点的所有特点包括各种属性
+      这个方法默认只会复制当前节点，而不会复制节点的子节点
+      可以传递一个true作为参数，这样该方法也会将元素的子节点一起复制 */
+      const ul2 = document.getElementById('two')
+      ul2.append(newli)
+      newli.id = 'newname1'//因为复制会把属性也复制过来，所以我们要手动更改一部分属性
+    }
+  </script>
+</body>
+
+</html>

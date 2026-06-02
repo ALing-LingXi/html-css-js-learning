@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let reg = /a{2}/
+    console.log(reg.test("aa"));
+   
+    reg = /a{2,}/ //连续两个或两个以上的a才行
+    console.log(reg.test("assssa"));
+    reg = /a{1,2}/
+    console.log(reg.test("aasa")); //1-2 a
+    console.log(reg.test("asaasa")); //匹配到就返回true
+    reg = /a?/ //永远都是true  0-1个a
+    console.log(reg.test("asaasa"));
+    reg = /a+/ //一个以上
+    console.log(reg.test(""));
+    reg = /a*/ //任意个数
+    console.log(reg.test(""));
+ </script>
+</body>
+</html>

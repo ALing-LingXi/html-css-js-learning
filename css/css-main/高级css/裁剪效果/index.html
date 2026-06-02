@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      display: block;
+    }
+
+    .bs1 {
+      width: 200px;
+      height: 100px;
+      margin: 100px auto;
+      background-color: black;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    }
+
+    .bs2 {
+      position: relative;
+      width: 700px;
+    }
+
+    .bs2 img {
+      width: 700px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .bs2 img:last-child {
+      clip-path: polygon(0% 0%, 0 0, 0 54%, 0 100%, 0 100%);
+      transition: all 2s;
+    }
+
+    .bs2:hover img:last-child {
+      clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bs1">
+    恶魔之根
+  </div>
+  <div class="bs2">
+    <img src="./img/blue.png" alt="">
+    <img src="./img/orange.png" alt="">
+  </div>
+</body>
+
+</html>

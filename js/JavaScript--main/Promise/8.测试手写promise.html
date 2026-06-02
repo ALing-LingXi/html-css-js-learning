@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./7手写promise.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <script >
+//    const p = new Promise((resolve,reject)=>{
+//    setTimeout(() => {
+//     resolve("哈啊哈h")
+//    }, 1000);
+//    })
+// let t = p.then(result=>{throw "error"}).then(result=>{},
+// ).then(undefined,reason=>{
+//   console.log(reason);
+// })
+// console.log(t);
+// console.log(p);
+const d = Promise.reject("ahahha")
+console.log(d);
+const r = Promise.resolve(new Promise((resolve,reject)=>{
+ reject("哈哈")
+}))
+  console.log(r);
+  
+  </script>
+  
+</body>
+</html>

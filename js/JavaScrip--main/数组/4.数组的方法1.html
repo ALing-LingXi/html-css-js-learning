@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     非破坏性方法：使用完之后不会影响原来的数组
+    1.Array.isArray()判断参数是否为数组 是返回true 否则返回false
+    2.数组.length()返回数组的长度
+    3.数组.at()根据索引获取指定的元素，可以传负数，则倒序返回
+    4.数组.concat()将两个或多个数组连接在一起返回一个新的数组 */
+    const arr1 = ['linxixi','xixilin','xixi',]
+    const arr2 = ['5418ly','yueye','ziyoudetiankong']
+    const obj = { name:"xixi"}
+    console.log(Array.isArray(obj));
+    console.log(Array.isArray(arr1));
+    console.log(arr1.length);
+    console.log(arr1.at(0));
+    console.log(arr1.at(1));
+    console.log(arr1.at(-1));
+    console.log(arr1.at(-2));
+    console.log(arr1.concat(arr2,arr1));
+    console.log(arr1);
+    console.log(arr2);
+    
+    
+  </script>
+</body>
+</html>

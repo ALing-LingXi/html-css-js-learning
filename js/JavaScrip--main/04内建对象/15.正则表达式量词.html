@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*     正则表达式量词（重复匹配规则）
+    {m}
+        正好匹配 m 次。
+    {m,}
+        至少匹配 m 次。
+    {m,n}
+        匹配 m 到 n 次。
+    +
+        匹配 一次以上。
+    *
+        匹配任意数量。
+    ?
+        匹配 0 次或 1 次，相当于 {0,1}永远返回true */
+        let str = 'aabcda'
+        let reg = /a{2}/
+        console.log(reg.test(str));
+        reg = /a{1,}/
+        console.log(reg.test(str));
+         str = 'abcvv'
+        reg = /a+/
+        console.log(reg.test(str));
+        str = 'bcvv'
+        console.log(reg.test(str));
+        reg = /a*/
+        console.log(reg.test(str));
+        reg = /a?/
+        str = 'aaabcjdkk'
+        console.log(reg.test(str));
+        str = 'bbbabdd'
+        console.log(reg.test(str));
+
+  </script>
+</body>
+</html>

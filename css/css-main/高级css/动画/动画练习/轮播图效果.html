@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background-color: pink;
+    }
+    .scroll {
+      margin: 100px auto;
+      width: 1180px;
+      border: 2px solid red;
+      display: flex;
+      overflow: hidden;
+    }
+
+    .scroll img {
+      width: 180px;
+      height: 90px;
+      border-radius: 6px;
+      display: block;
+      animation: scroll 5s linear infinite;
+    }
+
+    .scroll:hover img{
+      animation-play-state: paused;
+    }
+     .ad1 {
+      display: grid;
+      grid-template-columns: repeat(6, 180px);
+      grid-template-rows: repeat(4, 90px);
+      gap: 10px 20px;
+      margin-right: 20px;
+    }
+
+    .ad2 {
+      display: grid;
+      grid-template-columns: repeat(6, 180px);
+      grid-template-rows: repeat(4, 90px);
+      gap: 10px 20px;
+    }
+
+    @keyframes scroll {
+      100% {
+        transform: translateX(-1200px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="scroll">
+    <div class="ad1">
+      <img src="./img/ad1.jpg" alt="">
+      <img src="./img/ad2.jpg" alt="">
+      <img src="./img/ad3.jpg" alt="">
+      <img src="./img/ad4.jpg" alt="">
+      <img src="./img/ad5.jpg" alt="">
+      <img src="./img/ad6.jpg" alt="">
+      <img src="./img/ad1.jpg" alt="">
+      <img src="./img/ad2.jpg" alt="">
+      <img src="./img/ad3.jpg" alt="">
+      <img src="./img/ad4.jpg" alt="">
+      <img src="./img/ad5.jpg" alt="">
+      <img src="./img/ad6.jpg" alt="">
+      <img src="./img/ad1.jpg" alt="">
+      <img src="./img/ad2.jpg" alt="">
+      <img src="./img/ad3.jpg" alt="">
+      <img src="./img/ad4.jpg" alt="">
+      <img src="./img/ad5.jpg" alt="">
+      <img src="./img/ad6.jpg" alt="">
+      <img src="./img/ad1.jpg" alt="">
+      <img src="./img/ad2.jpg" alt="">
+      <img src="./img/ad3.jpg" alt="">
+      <img src="./img/ad4.jpg" alt="">
+      <img src="./img/ad5.jpg" alt="">
+      <img src="./img/ad6.jpg" alt="">
+    </div>
+    <div class="ad2">
+      <img src="./img/ad1.jpg" alt="">
+      <img src="./img/ad2.jpg" alt="">
+      <img src="./img/ad3.jpg" alt="">
+      <img src="./img/ad4.jpg" alt="">
+      <img src="./img/ad5.jpg" alt="">
+      <img src="./img/ad6.jpg" alt="">
+      <img src="./img/ad1.jpg" alt="">
+      <img src="./img/ad2.jpg" alt="">
+      <img src="./img/ad3.jpg" alt="">
+      <img src="./img/ad4.jpg" alt="">
+      <img src="./img/ad5.jpg" alt="">
+      <img src="./img/ad6.jpg" alt="">
+      <img src="./img/ad1.jpg" alt="">
+      <img src="./img/ad2.jpg" alt="">
+      <img src="./img/ad3.jpg" alt="">
+      <img src="./img/ad4.jpg" alt="">
+      <img src="./img/ad5.jpg" alt="">
+      <img src="./img/ad6.jpg" alt="">
+      <img src="./img/ad1.jpg" alt="">
+      <img src="./img/ad2.jpg" alt="">
+      <img src="./img/ad3.jpg" alt="">
+      <img src="./img/ad4.jpg" alt="">
+      <img src="./img/ad5.jpg" alt="">
+      <img src="./img/ad6.jpg" alt="">
+    </div>
+  </div>
+</body>
+
+</html>

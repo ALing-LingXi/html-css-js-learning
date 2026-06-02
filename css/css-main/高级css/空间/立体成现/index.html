@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .father,
+    .prev,
+    .next {
+      width: 200px;
+      height: 200px;
+    }
+
+    .father {
+      perspective: 1000px;
+      background-color: pink;
+      transition: all 1s;
+      position: relative;
+      transform-style: preserve-3d;
+    }
+
+    .prev {
+      background-color: red;
+      transform: translateZ(100px);
+    }
+
+    .next {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      background-color: yellowgreen;
+      transform: translateZ(-100px);
+    }
+
+    .father:hover {
+      transform: rotateY(89deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="father">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</body>
+
+</html>
